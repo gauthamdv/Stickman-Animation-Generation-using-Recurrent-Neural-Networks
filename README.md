@@ -83,16 +83,6 @@ pip install tensorflow numpy mediapipe opencv-python
 2. Use MediaPipe to extract 33 pose keypoints per frame.
 3. Reduce to 11 keypoints and save the data as `points.npy`.
 
-### 🧪 Training
-
-```bash
-python main.py
-```
-
-The model will:
-- Load the dataset (`points.npy`)
-- Create sequences for training
-- Train and save to `rnn_model.h5`
 
 ### 🔮 Inference
 
