@@ -108,6 +108,7 @@ To visualize the output as animation:
 
 ## 📈 Future Work
 
+- Feed these points to any animation software
 - Extend to handle multiple people or 3D pose data
 - Improve prediction accuracy with attention mechanisms or Transformer-based models
 
