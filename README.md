@@ -47,6 +47,28 @@ The following body parts are extracted from the 33 MediaPipe landmarks:
 
 ## 🏃 Usage
 
+### Installation
+
+```bash
+git clone https://github.com/gauthamdv/Stickman-Animation-Generation-using-Recurrent-Neural-Networks
+cd Stickman-Animation-Generation-using-Recurrent-Neural-Networks
+pip install -r requirements.txt
+```
+
+### Run Training
+
+```bash
+python Codes/train_model.py
+```
+
+### Generate Animations
+
+```bash
+python Codes/generate_animation.py
+```
+
+---
+
 ### 📦 Requirements
 
 Install the required packages:
@@ -97,6 +119,31 @@ predicted_sequence = model.predict(start_pose)
 
 ---
 
+## 🧠 Model Overview
+
+- Type: RNN-based sequence generator
+- Input: 11 pose keypoints from the previous frame
+- Output: 11 keypoints for the next frame
+- Training: Sequences of pose frames from MediaPipe output
+- Feedback: Output of one timestep is fed into the next
+
+---
+
+## 🎯 Output
+
+- 2D keypoints that can be mapped onto any animation model
+- Can be visualized as stick figures or converted for use in animation software
+
+---
+
+## 📈 Evaluation
+
+- Custom point-wise loss function
+- Visual comparisons across predicted and real sequences
+- Metrics tracked across epochs (loss, accuracy)
+
+---
+
 ## 🎞️ Animation Notes
 
 To visualize the output as animation:
@@ -108,9 +155,10 @@ To visualize the output as animation:
 
 ## 📈 Future Work
 
-- Feed these points to any animation software
-- Extend to handle multiple people or 3D pose data
-- Improve prediction accuracy with attention mechanisms or Transformer-based models
+- Add a Transformer baseline for performance comparison
+- Introduce noise scheduling to improve long-sequence generation
+- Integrate output into tools like Blender/Unity
+- JSON export for skeletal mapping
 
 ---
 
