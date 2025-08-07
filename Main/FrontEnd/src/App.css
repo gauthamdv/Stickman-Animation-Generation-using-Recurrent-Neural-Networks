@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 5fr 1fr 1fr;
+  row-gap: 1rem;
+  column-gap: 8rem;
+  font-family: "Alata", sans-serif;
+  font-weight: bolder;
+  font-style: normal;
+
+  .img-container {
+    display: flex;
+    border: 4px solid #000000;
+    border-radius: 0.2rem;
+    justify-content: center;
+    align-items: center;
+    color: #6a6a6a;
+    background: white;
+
+    img {
+      max-height: 46vh;
+      justify-self: center;
+      align-self: center;
+    }
+  }
+
+  .file-container {
+    grid-column-start: 1;
+    grid-column-end: 2 ;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: 1fr 0.2fr;
+    grid-template-rows: 1fr;
+    border: 2px solid #000000;
+    border-radius: 1rem 0 0 1rem;
+    width: 37vw;
+    padding: 0 0 0 2rem;
+    background: white;
+
+    p {
+      justify-self: start;
+      align-self: center;
+      margin: 0;
+      color: #6a6a6a;
+    }
+
+    .custom-file-upload-btn {
+      display: flex;
+      border: 3px solid white;
+      border-radius: 1rem 0 0 1rem;
+      background: #780000;
+      justify-content: center;
+      align-items: center;
+      height: 5rem;
+      width: 10rem;
+      cursor: pointer;
+      justify-self: end;
+      &:hover,
+      &:active {
+        background: #c1121f;
+      }
+
+      p {
+        padding: 1rem;
+        margin: 0;
+        color: #fdf0d5;
+      }
+    }
+  }
+
+  .upload-image-btn {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background: #780000;
+    color: white;
+    border-radius: 1rem;
+    border: none;
+    font-family: "Alata", sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      background: #c1121f;
+    }
+  }
+
+  .instructions {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+
+    .instruction1 {
+      display: grid;
+      grid-template-columns: 0.1fr 1fr;
+      grid-template-rows: 1fr;
+      width: 20vw;
+      height: 6vh;
+      justify-items: center;
+      align-items: center;
+      align-self: end;
+
+      svg {
+        height: 2rem;
+      }
+      p {
+        margin: 0;
+        color: black;
+        text-align: start;
+        justify-self: start;
+      }
+    }
+
+    .instruction2 {
+      display: grid;
+      grid-template-columns: 0.1fr 1fr;
+      grid-template-rows: 1fr;
+      width: 20vw;
+      height: 6vh;
+      justify-items: center;
+      align-items: center;
+      align-self: start;
+
+      svg {
+        height: 2rem;
+      }
+      p {
+        margin: 0;
+        color: black;
+        text-align: start;
+        justify-self: start;
+      }
+    }
+  }
+
+  .generate-animation-btn {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 9.2vh;
+    background: #007f5f;
+    color: white;
+    border-radius: 1rem;
+    border: none;
+    font-family: "Alata", sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 1rem;
+    align-self: center;
+
+    &:hover,
+    &:active {
+      background: #2b9348;
+    }
+  }
+
+  .run-application-btn {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    height: 9.2vh;
+    background: #007f5f;
+    color: white;
+    border-radius: 1rem;
+    border: none;
+    font-family: "Alata", sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 1rem;
+    align-self: center;
+
+    &:hover,
+    &:active {
+      background: #2b9348;
+    }
+  }
+}
